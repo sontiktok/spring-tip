@@ -1,10 +1,12 @@
 package com.sondev.service;
 
 import com.sondev.entity.user.UserEntity;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 
+@Service
 public interface UserService {
     UserEntity createUser(UserEntity user);
-    List<UserEntity> getAllUsers();
+
+    UserEntity findByUserNameUserEmail(String userName,String userEmail);
 }
